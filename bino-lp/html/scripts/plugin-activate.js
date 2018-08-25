@@ -121,6 +121,8 @@ $(document).ready(function() {
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
             if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('#Header ul li').removeClass("active");
+                currLink.addClass("active");
                 $('#Header ul li a').removeClass("active");
                 currLink.addClass("active");
             }
